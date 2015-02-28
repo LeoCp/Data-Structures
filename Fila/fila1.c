@@ -19,71 +19,62 @@ struct fifo {
 typedef struct fifo FIFO;
 ////////////////////////
 
-//Declaração de Funções//
-int *CriarFila(int);
-void LerFila(FIFO*);
-////////////////////////
+//Declaração de Funções//////
+FIFO *CriarFila(int);
+int RetirarFila(FIFO*);
+void InseriFila(FIFO*,int);
+void MostraFila(FIFO*);
+////////////////////////////
 
 
 //Função Cria Fila///////////////////////////////
-int *CriarFila(int x){
+FIFO *CriarFila(int x){
 
 	FIFO *y;
 	y = (FIFO*) malloc(sizeof(FIFO));
-	y->inicio = -1;
-	y->fim = 0;
+	y->inicio = 0;
+	y->fim = -1;
 	y->tamanho = x;
 	y->conteudo = (int*) malloc(x*sizeof(int));
+
+	return y;
 
 }
 /////////////////////////////////////////////////
 
-//Função Ler Fila///////////////////////////////
 
-void LerFila(FIFO *z){
-
-}/*********************************************
-* Leonardo Colodette
-* CC3M - Ciencia da Computação - UVV
-* TAD FIFO
-********************************************/
-
-//Estrutura////////////
-struct fifo {
+//Função Inserir Fila///////////////////////////////
+void InseriFila(FIFO *z, int w){
+		
+		z->fim++;
+		z->conteudo[z->fim] = w;	
 	
-	int *conteudo;
-	int inicio;
-	int fim;
-	int tamanho;
-
-};
-///////////////////////
-
-//Declarando o apelido///
-typedef struct fifo FIFO;
-////////////////////////
-
-//Declaração de Funções//
-int *CriarFila(int);
-void LerFila(FIFO*);
-////////////////////////
+}
+////////////////////////////////////////////////
 
 
-//Função Cria Fila///////////////////////////////
-int *CriarFila(int x){
+//Função Retirar///////////////////////////////
+int RetirarFila(FIFO *y){
+ 		
+ 		int k;
 
-	FIFO *y;
-	y = (FIFO*) malloc(sizeof(FIFO));
-	y->inicio = -1;
-	y->fim = 0;
-	y->tamanho = x;
-	y->conteudo = (int*) malloc(x*sizeof(int));
+ 		k = y->conteudo[y->inicio];
+ 		y->inicio++;
+
+ 		return k;
 
 }
-/////////////////////////////////////////////////
+//////////////////////////////////////////////
 
-//Função Ler Fila///////////////////////////////
+//Função Mostra//////////////////////////////
+void MostraFila(FIFO *w){
 
-void LerFila(FIFO *z){
+	int i;
+	printf("MOSTRANDO..\n");
+	for(i = w->inicio; i < w->tamanho; i++){
+		printf("%d\n",w->conteudo[i]);
+	}
+	 
 
 }
+/////////////////////////////////////////////
