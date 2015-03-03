@@ -40,6 +40,7 @@ int main(void){
 			case 3:
 
 				RetirarFila(x);
+				
 			
 			break;
 

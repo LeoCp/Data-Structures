@@ -45,10 +45,11 @@ FIFO *CriarFila(int x){
 
 //Função Inserir Fila///////////////////////////////
 void InseriFila(FIFO *z, int w){
+			
+			z->fim++;
+			z->conteudo[z->fim] = w;	
 		
-		z->fim++;
-		z->conteudo[z->fim] = w;	
-	
+			
 }
 ////////////////////////////////////////////////
 
@@ -57,11 +58,10 @@ void InseriFila(FIFO *z, int w){
 int RetirarFila(FIFO *y){
  		
  		int k;
-
  		k = y->conteudo[y->inicio];
- 		y->inicio++;
-
+ 		y->inicio++;y->tamanho++;
  		return k;
+
 
 }
 //////////////////////////////////////////////
@@ -74,7 +74,7 @@ void MostraFila(FIFO *w){
 	for(i = w->inicio; i < w->tamanho; i++){
 		printf("%d\n",w->conteudo[i]);
 	}
-	 
+	printf("valor[0]: %d\n", w->conteudo[0]);
 
 }
 /////////////////////////////////////////////
