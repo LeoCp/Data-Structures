@@ -1,4 +1,5 @@
 /*********************************************
+* fila1.c
 * Leonardo Colodette
 * CC3M - Ciencia da Computação - UVV
 * TAD FIFO
@@ -42,7 +43,6 @@ FIFO *CriarFila(int x){
 }
 /////////////////////////////////////////////////
 
-
 //Função Inserir Fila///////////////////////////////
 void InseriFila(FIFO *z, int w){
 			
@@ -53,13 +53,11 @@ void InseriFila(FIFO *z, int w){
 }
 ////////////////////////////////////////////////
 
-
 //Função Retirar///////////////////////////////
 int RetirarFila(FIFO *y){
  		
- 		int k;
- 		k = y->conteudo[y->inicio];
- 		y->inicio++;y->tamanho++;
+ 		int k = y->conteudo[y->inicio];
+	 	y->inicio++; y->tamanho++;		
  		return k;
 
 
@@ -70,11 +68,10 @@ int RetirarFila(FIFO *y){
 void MostraFila(FIFO *w){
 
 	int i;
-	printf("MOSTRANDO..\n");
 	for(i = w->inicio; i < w->tamanho; i++){
 		printf("%d\n",w->conteudo[i]);
 	}
-	printf("valor[0]: %d\n", w->conteudo[0]);
+	
 
 }
 /////////////////////////////////////////////

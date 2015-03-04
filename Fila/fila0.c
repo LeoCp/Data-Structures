@@ -1,4 +1,5 @@
 /*********************************************
+* fila0.c
 * Leonardo Colodette
 * CC3M - Ciencia da Computação - UVV
 * FIFO
@@ -8,30 +9,41 @@
 #include <unistd.h>
 #include "fila1.c"
 
+//Declaração de funções//
 void menu();
+////////////////////////////
 
-int main(void){
-	
+
+int 
+main(void){
+
+//Variaveis//////
 	FIFO *x;
 	int op,y,k;
-	
+////////////////
+
 	do{
+
 		system("clear");
 		menu();	
-		printf("Digite a opção:");scanf("%d",&op);
+		printf("Digite a opção:");
+		scanf("%d",&op);
 		
 		switch(op){
 	
 			case 1:
-			
+				
+				system("clear");
+				menu();
 				printf("Digite o tamanho da fila:");scanf("%d",&y);
 				x = CriarFila(y);
 			
 			break;
 
 			case 2:
-				
-				printf("Inserindo..\n");
+				system("clear");
+				menu();
+				printf("Insera o valor:");
 				scanf("%d", &k);
 				InseriFila(x,k);
 			
@@ -39,14 +51,20 @@ int main(void){
 		
 			case 3:
 
-				RetirarFila(x);
-				
+				system("clear");
+				menu();
+				printf("Valor retirado: %d\n", RetirarFila(x));
+				sleep(4);
 			
 			break;
 
 			case 4:
+				system("clear");
+				menu();
+				printf("Valores na fila:\n");
 				MostraFila(x);
 				sleep(5);			
+			
 			break;
 
 			case 5:
@@ -58,7 +76,7 @@ int main(void){
 		
 			default:
 			
-				printf("AHA!\n");
+				
 			
 			break;
 
@@ -67,11 +85,11 @@ int main(void){
 	}while(op != 5);
 
 return 0;
+
 }
 
-
-void 
-menu(){
+///Função menu/////////////////////////////////////////////////////////////////////////////////////////////
+void menu(){
 
 	printf("\n++++++++++++++++++++++++++++++++++++++++++\n");
 	printf("\tBEM VINDO A FILA DO SUS :]          \n");
@@ -80,3 +98,5 @@ menu(){
 	printf("++++++++++++++++++++++++++++++++++++++++++\n");
 
 }
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
