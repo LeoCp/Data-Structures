@@ -1,3 +1,10 @@
+/*********************************************
+* pilha0.c
+* Leonardo Colodette
+* CC3M - Ciencia da Computação - UVV
+* PILHA
+*******************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "pilha1.c"
@@ -34,6 +41,8 @@ do{
 		break;
 
 		case 3:
+			printf("Valor retirado:%d\n",RetirarPilha(p));
+			sleep(4);
 		break;
 
 		case 4:
@@ -49,7 +58,7 @@ do{
 
 }while(op != 5);
 
-
+return 0;
 
 }
 

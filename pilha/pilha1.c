@@ -1,3 +1,10 @@
+/*********************************************
+* pilha1.c
+* Leonardo Colodette
+* CC3M - Ciencia da Computação - UVV
+* TAD PILHA
+*******************************************/
+
 struct pilha{
 	int *v;
 	int topo;
@@ -41,7 +48,9 @@ void MostrarPilha(PILHA *w){
 
 int RetirarPilha(PILHA *d){
 
-	/*code*/
+	int r =  d->v[d->tamanho-1];
+	d->tamanho--;
+	return r;
 
 }
 
