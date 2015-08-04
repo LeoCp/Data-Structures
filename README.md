@@ -1,10 +1,10 @@
 #Estrutura de Dados
 <br>
 ##Sumário
-[Fila]()
-[Pilha]()
-[Lista]()
-[Arvore]()
+* [Fila]()
+* [Pilha]()
+* [Lista]()
+* [Arvore]()
 
 
 
