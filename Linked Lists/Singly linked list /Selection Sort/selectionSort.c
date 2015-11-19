@@ -18,7 +18,7 @@ Node *newNode(int);
 Node *addNode(Node*,Node*);
 void showNode(Node*);
 void showList(Node*);
-
+void selectionSort(Node*);
 //removeNode
 //alterNode
 //searchNode
@@ -65,4 +65,9 @@ void showList(Node *z){
     showNode(z);
     showList(z->next);
   }
+}
+
+void selectionSort(Node *s){
+/*CODE*/
+
 }
