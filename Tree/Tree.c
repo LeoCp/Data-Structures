@@ -33,7 +33,6 @@ main(){
 		scanf("%d",&y);
 	}
 	showTree(x);
-
 }
 
 Node* newNode(int value){
@@ -74,5 +73,3 @@ void showTree(Node *root){
 }
 int height(Node*);
 int weight(Node*);
-
-
