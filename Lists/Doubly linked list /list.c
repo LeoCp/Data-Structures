@@ -19,7 +19,7 @@ Node *addNode(Node*,Node*);
 void showNode(Node*);
 void showList(Node*);
 void removeNode(Node*,int,int);
-void alterNode (Node*,int,int);
+void alterNode (Node*,int,int,int);
 void design (int);
 
 main(){
@@ -42,7 +42,7 @@ main(){
       case 2:
         system("clear");design(3);
         showList(n);design(4);
-        printf("Sair[0/1]: ");scanf("%d",&s);
+        printf("Sair[1]: ");scanf("%d",&s);
       break;
 
       case 3:
@@ -51,11 +51,20 @@ main(){
         showList(n);design(4);
         printf("Qual valor? ");scanf("%d",&s);
         printf("Qual indice? ");scanf("%d",&r);
+        removeNode(n,s,r);
+
 
       break;
 
       case 4:
-        printf("op 4\n");
+      system("clear");design(6);
+      showList(n);design(4);
+      printf("Qual valor? ");scanf("%d",&s);
+      printf("Qual indice? ");scanf("%d",&r);
+      printf("Valor novo: ");scanf("%d",&v);
+      alterNode (n,s,v,r);
+      printf("Sair[1]:");scanf("%d",&s);
+
       break;
       case 5:
         printf("Bey\n");
@@ -98,8 +107,28 @@ void showList(Node *z){
   }
 }
 void removeNode(Node *f,int number, int inde){
+  int i; Node *a,*b,*c;a = f;
+
+  for (i = 0; i < inde; i++) {
+    a = a->next;
+  }
+
+ b = a->prev;c = a->next;
+ free(a);
+ b->next = c;c->prev = b;
+
+
 }
-void alterNode (Node *h ,int ant,int nov ){}
+void alterNode (Node *h ,int ant,int nov ,int ind){
+  Node *f;
+  f=h; int i;
+
+  for (i = 0; i < ind; i++) {
+    f = f->next;
+  }
+  if(f->value == ant)f->value = nov;
+
+}
 
 void design (int x){
   switch (x) {
@@ -136,6 +165,13 @@ void design (int x){
     printf("-----------------\n");
     printf("|     Remover   |\n");
     printf("-----------------\n");
+    break;
+
+    case 6:
+    printf("-----------------\n");
+    printf("|    Aletrar    |\n");
+    printf("-----------------\n");
+
     break;
   }
 }

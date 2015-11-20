@@ -65,7 +65,5 @@ void showList(Node *z){
   }
 }
 
-void removeNode(Node *f,int number){
-
-}
+void removeNode(Node *f,int number){}
 void alterNode (Node *h ,int ant,int nov ){}
