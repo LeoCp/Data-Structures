@@ -1,6 +1,6 @@
 /*****************************
 * Leonardo Colodette
-* Linked Lists
+* Singly linked list
 ****************************/
 #include <stdio.h>
 #include <stdlib.h>
