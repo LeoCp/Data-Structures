@@ -17,9 +17,9 @@ Node *newNode(int);
 Node *addNode(Node*,Node*);
 void showNode(Node*);
 void showList(Node*);
-//removeNode
-//alterNode
-//searchNode
+void removeNode(Node*,int);
+void alterNode (Node*,int,int);
+
 
 main(){
 
@@ -64,3 +64,6 @@ void showList(Node *z){
     showList(z->next);
   }
 }
+
+void removeNode(Node *f,int number){}
+void alterNode (Node *h ,int ant,int nov ){}

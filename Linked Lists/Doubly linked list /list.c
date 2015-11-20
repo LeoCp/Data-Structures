@@ -1,13 +1,15 @@
-/*************************************
+/*****************************
 * Leonardo Colodette
-* SinglyLinkedList + SelectionSort
-************************************/
+* Doubly Linked Lists
+****************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 
 struct node{
   int value;
   struct node *next;
+  struct node *prev;
 };
 
 typedef struct node Node;
@@ -17,10 +19,9 @@ Node *newNode(int);
 Node *addNode(Node*,Node*);
 void showNode(Node*);
 void showList(Node*);
-void selectionSort(Node*);
-//removeNode
-//alterNode
-//searchNode
+void removeNode(Node*,int);
+void alterNode (Node*,int,int);
+
 
 main(){
 
@@ -40,6 +41,7 @@ Node *newNode(int number){
   Node *x = (Node*) malloc (sizeof(Node));
   x->value = number;
   x->next = NULL;
+  x->prev = NULL;
   return x;
 }
 
@@ -52,6 +54,7 @@ Node *addNode(Node *root, Node *next){
     y = y->next;
   }
   y->next = next;
+  next->prev = y;
   return root;
 }
 
@@ -65,8 +68,5 @@ void showList(Node *z){
     showList(z->next);
   }
 }
-
-void selectionSort(Node *s){
-/*CODE*/
-
-}
+void removeNode(Node *f,int number){}
+void alterNode (Node *h ,int ant,int nov ){}
