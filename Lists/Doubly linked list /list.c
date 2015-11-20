@@ -57,18 +57,20 @@ main(){
       break;
 
       case 4:
-      system("clear");design(6);
-      showList(n);design(4);
-      printf("Qual valor? ");scanf("%d",&s);
-      printf("Qual indice? ");scanf("%d",&r);
-      printf("Valor novo: ");scanf("%d",&v);
-      alterNode (n,s,v,r);
-      printf("Sair[1]:");scanf("%d",&s);
-
+        system("clear");design(6);
+        showList(n);design(4);
+        printf("Qual valor? ");scanf("%d",&s);
+        printf("Qual indice? ");scanf("%d",&r);
+        printf("Valor novo: ");scanf("%d",&v);
+        alterNode (n,s,v,r);
+        printf("Sair[1]:");scanf("%d",&s);
+        
       break;
+      
       case 5:
         printf("Bey\n");
       break;
+    
     }
   }
 
