@@ -1,7 +1,8 @@
-/*****************************
+/**************************************
 * Leonardo Colodette
-* Doubly linked list
-****************************/
+* Doubly linked list + Selection Sort
+**************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 

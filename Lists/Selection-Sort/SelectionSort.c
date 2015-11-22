@@ -142,8 +142,7 @@ void selectionSort(Node *root){
     while (b->next != NULL) {
       b = root->next;
       if(a->value > b->value){
-        a->next = b->next; b->prev = a->prev;
-        a->prev = b; b->next = a;
+        /*code*/
       }
     }
     a = root->next;
